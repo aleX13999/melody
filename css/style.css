@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("BebasNeueRegular"),
+    url("../fonts/BebasNeueRegular.woff2") format("woff2"),
+    url("../fonts/BebasNeueRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Шапка сайта */
+.header {
+  background-color: #635854;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 4px solid #3596f5;
+}
+.navbar {
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.navbar-item {
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: center;
+}
+.navbar-link {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar-text {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  text-align: right;
+}
+.navbar-phone {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Основной блок */
+.main {
+  max-width: 80%;
+  margin: auto;
+  padding-top: 54px;
+  display: flex;
+}
+.main-title {
+  margin: 0;
+  font-family: "Bebas Neue Regular", sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 44px;
+  color: #635854;
+}
+.main-info {
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-image path {
+  opacity: 0;
+}
+.home-image path:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.counter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.counter-button {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+.counter {
+  font-family: "Bebas Neue Regular", sans-serif;
+  color: #635854;
+  font-size: 120px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.button-primary {
+  background: #3596f5;
+  font-family: "Bebas Neue Regular", sans-serif;
+  padding: 16px 36px;
+  border-radius: 6px;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
