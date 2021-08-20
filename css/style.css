@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "Bebas Neue";
-  src: local("BebasNeueRegular"),
-    url("../fonts/BebasNeueRegular.woff2") format("woff2"),
-    url("../fonts/BebasNeueRegular.woff") format("woff");
+  font-family: 'Bebas Neue';
+  src: local('BebasNeueRegular'),
+    url('../fonts/BebasNeueRegular.woff2') format('woff2'),
+    url('../fonts/BebasNeueRegular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Шапка сайта */
@@ -23,7 +23,7 @@ body {
   border-bottom: 4px solid #3596f5;
 }
 .navbar {
-  max-width: 80%;
+  max-width: 1280px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -60,14 +60,14 @@ body {
 
 /* Основной блок */
 .main {
-  max-width: 80%;
+  max-width: 1280px;
   margin: auto;
   padding-top: 54px;
   display: flex;
 }
 .main-title {
   margin: 0;
-  font-family: "Bebas Neue Regular", sans-serif;
+  font-family: 'Bebas Neue Regular', sans-serif;
   font-weight: normal;
   font-size: 30px;
   line-height: 44px;
@@ -79,7 +79,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .home-image path {
   opacity: 0;
@@ -87,6 +87,9 @@ body {
 .home-image path:hover {
   opacity: 1;
   cursor: pointer;
+}
+path.current-floor {
+  opacity: 1;
 }
 .counter-group {
   display: flex;
@@ -98,8 +101,8 @@ body {
   border: 0;
   cursor: pointer;
 }
-.counter {
-  font-family: "Bebas Neue Regular", sans-serif;
+.floor-counter {
+  font-family: 'Bebas Neue Regular', sans-serif;
   color: #635854;
   font-size: 120px;
   margin-top: 10px;
@@ -107,10 +110,106 @@ body {
 }
 .button-primary {
   background: #3596f5;
-  font-family: "Bebas Neue Regular", sans-serif;
   padding: 16px 36px;
   border-radius: 6px;
   color: #fff;
   border: 0;
   cursor: pointer;
+}
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s;
+}
+.is-open {
+  opacity: 1;
+  transform: scale(1);
+}
+.modal-dialog {
+  position: relative;
+  max-width: 1000px;
+  min-height: 565px;
+  background-color: #fff;
+  flex-grow: 1;
+  opacity: 0;
+  display: flex;
+  transform: translateY(-10%);
+  transition: transform 0.2s, opacity 0.2s;
+  transition-delay: 0.2s;
+}
+.is-open > .modal-dialog {
+  opacity: 1;
+  transform: translateY(0);
+}
+.modal-image {
+  background-color: #ebebeb;
+  width: 60%;
+  text-align: center;
+  padding: 50px;
+}
+.modal-title {
+  font-family: 'Bebas Neue Regular', sans-serif;
+  font-weight: lighter;
+  font-size: 22px;
+  line-height: 24px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.modal-info {
+  padding: 50px 46px;
+  width: 40%;
+}
+.flat-list {
+  padding: 0;
+  list-style: none;
+  margin-top: 55px;
+}
+.flat-item {
+  margin-bottom: 10px;
+}
+.flat-link {
+  font-size: 16px;
+  line-height: 19px;
+  color: #635854;
+  text-decoration: none;
+}
+.flat-link:hover {
+  color: #3596f5;
+  text-decoration: underline;
+}
+.modal-alert {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #635854;
+  margin-top: 55px;
+}
+.modal-close-button {
+  position: absolute;
+  right: 27px;
+  top: 38px;
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+.flats path {
+  opacity: 0;
+}
+.flats path:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.current-flat-link {
+  color: #3596f5;
+  text-decoration: underline;
 }
