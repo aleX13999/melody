@@ -13,11 +13,6 @@ $(document).ready(function () {
     floorPath.removeClass('current-floor') //удаляем класс, чтобы убрать подсветку
   })
 
-  flatPath.on('mouseover', function () {
-    currentFlat = $(this).attr('data-flat')
-    $('.flat-link').toggleClass('current-flat-link')
-  })
-
   //при нажатии на кнопку вверх
   counterUp.on('click', function () {
     //проверка на верхний этаж
@@ -61,5 +56,4 @@ $(document).ready(function () {
   }
 
   //
-  $('.view-flats').on('click', toggleModal)
 })

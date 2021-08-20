@@ -209,7 +209,3 @@ path.current-floor {
   opacity: 1;
   cursor: pointer;
 }
-.current-flat-link {
-  color: #3596f5;
-  text-decoration: underline;
-}
