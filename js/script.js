@@ -54,6 +54,4 @@ $(document).ready(function () {
   function toggleModal() {
     modal.toggleClass('is-open')
   }
-
-  //
 })
